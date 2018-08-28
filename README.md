@@ -7,7 +7,7 @@ Im Package jarDateien sind die erforderlichen jar-Dateien für Properties einzus
 
 Die Datenbank befindet sich im package datenbank. Der Name ist Betreuer.mdb.
 Diese Datenbank nach erstellen eines Verzeichnisses C:/Datenbanken/ 
-dorthin kopieren.
+dorthin kopieren. Die Daten dieser Datenbank sind frei erfunden. 
 
 Im package pfad wird die Datenbankverbindung zu diesem Verzeichnis und dieser Datenbank erstellt.
 
