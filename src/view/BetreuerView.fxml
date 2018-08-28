@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="1400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.BetreuerViewController">
+   <children>
+      <BorderPane layoutX="14.0" layoutY="14.0" prefHeight="400.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TableView fx:id="tableView" editable="true" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="idColumn" prefWidth="75.0" text="id" />
+                <TableColumn fx:id="persnrColumn" prefWidth="75.0" text="PersNr" />
+                  <TableColumn fx:id="vornameColumn" onEditCommit="#changeBetreuerVornameCellEvent" prefWidth="250.0" text="Vorname" />
+                  <TableColumn fx:id="nameColumn" prefWidth="250.0" text="Name" />
+                  <TableColumn fx:id="strasseColumn" prefWidth="250.0" text="Strasse" />
+                  <TableColumn fx:id="wohnortColumn" minWidth="0.0" prefWidth="250.0" text="Wohnort" />
+                  <TableColumn fx:id="funktionColumn" minWidth="0.0" prefWidth="150.0" text="Funktion" />
+                  <TableColumn fx:id="rdColumn" minWidth="0.0" onEditCommit="#changeBetreuerRdCellEvent" prefWidth="85.0" text="Rd" />
+                  <TableColumn fx:id="rdNameColumn" minWidth="0.0" onEditCommit="#changeBetreuerRdCellEvent" prefWidth="120.0" text="RdName" />
+                  <TableColumn fx:id="geschlechtColumn" minWidth="0.0" prefWidth="120.0" text="Geschlecht" />
+                  <TableColumn fx:id="eintrittsdatumColumn" minWidth="0.0" onEditCommit="#changeBetreuerEintrittsdatumCellEvent" prefWidth="120.0" text="Eintritt" />
+                  <TableColumn fx:id="gehaltColumn" minWidth="0.0" prefWidth="120.0" text="Gehalt" />
+              </columns>
+            </TableView>
+         </center>
+         <top>
+            <HBox prefHeight="57.0" prefWidth="600.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label prefHeight="24.0" prefWidth="142.0" text="Namen Suche">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Label>
+                  <TextField fx:id="txtNamePersonal" onAction="#buttonPersonalsucher" prefHeight="25.0" prefWidth="282.0" promptText="Nachnamen eingeben">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </TextField>
+                  <Button fx:id="buttonPersonalSuche" mnemonicParsing="false" onAction="#buttonPersonalsucher" prefHeight="27.0" prefWidth="189.0" text="Suche">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="buttonXMLDatei" mnemonicParsing="false" onAction="#handleSaveBetreuerDatenAsXML" prefHeight="28.0" prefWidth="242.0" text="XML-Datei-Erzeugen">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="btnExcelDatei" layoutX="890.0" layoutY="15.0" mnemonicParsing="false" prefHeight="28.0" prefWidth="242.0" text="Excel-Datei-Erzeugen">
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="buttonGoBack" mnemonicParsing="false" onAction="#goBacktoFirstWindow" prefHeight="27.0" prefWidth="202.0" text="Hauptmenue">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox prefHeight="85.0" prefWidth="1390.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ProgressBar fx:id="progressBar" prefHeight="27.0" prefWidth="470.0" progress="0.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </ProgressBar>
+                  <TextField fx:id="textMessage" prefHeight="24.0" prefWidth="593.0">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                     <padding>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </padding>
+                  </TextField>
+                  <ProgressIndicator fx:id="progressIndicator" progress="0.0" />
+               </children>
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

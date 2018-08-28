@@ -1,0 +1,258 @@
+.root {
+    /*-fx-background-image: url("../Images/background.jpg"); */
+    /*-fx-background-color: #1d1d1d;*/
+    /*-fx-background-color: #339966;*/
+    /* -fx-background-color: #669999;*/
+    /*   -fx-background-color: #DEB887;*/
+          -fx-background-color: #F5F5F5;
+}
+
+.label {
+    -fx-font-size: 9pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: #0000CD; /* media blue */
+    -fx-opacity: 0.6;
+}
+
+.label-bright {
+    -fx-font-size: 9pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+
+.label-header {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 1;
+}
+
+.table-view {
+    -fx-base: #F8F8FF;                     /* #F5F5DC; */
+    -fx-control-inner-background: #F8F8FF; /* ghostwite #F5F5DC */
+    -fx-background-color: #F8F8FF; /* #F5F5DC; */
+    -fx-table-cell-border-color: transparent;
+    -fx-table-header-border-color: transparent;
+    -fx-padding: 5;
+}
+
+.table-view .column-header-background {
+  /*  -fx-background-color: transparent;*/
+     -fx-background-color: #008000;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-size: 35;
+    -fx-border-width: 0 0 1 0;
+    -fx-background-color: transparent;
+    -fx-border-color:
+        transparent
+        transparent
+        derive(-fx-base, 1%)
+        transparent;
+    -fx-border-insets: 0 10 1 0;
+}
+
+.table-view .column-header .label {
+    -fx-font-size: 9pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-opacity: 1;
+}
+
+.table-view .column {
+    -fx-font-size: 9pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-opacity: 1;
+}
+.table-view:focused .table-row-cell:filled:focused:selected {
+    -fx-background-color: -fx-focus-color;
+
+}
+
+.table-row-cell{
+     -fx-alignment: center;
+}
+.split-pane:horizontal > .split-pane-divider {
+    -fx-border-color: transparent #1d1d1d transparent #1d1d1d;
+    -fx-background-color: transparent, derive(#1d1d1d,20%);
+}
+
+.split-pane {
+    -fx-padding: 1 0 0 0;
+}
+
+.menu-bar {
+    -fx-background-color: derive(#1d1d1d,20%);
+}
+
+.context-menu {
+    -fx-background-color: derive(#1d1d1d,50%);
+}
+
+.menu-bar .label {
+    -fx-font-size: 12pt;
+    -fx-font-family: "Segoe UI Light";
+    -fx-text-fill: white;
+    -fx-opacity: 0.9;
+}
+
+.menu .left-container {
+    -fx-background-color: black;
+}
+
+.text-field {
+    -fx-font-size: 10pt;
+    -fx-font-family: "Segoe UI Semibold";
+}
+
+.radio-button {
+     -fx-padding: 5 10 5 10;
+    -fx-font-size: 9pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-opacity: 0.6;
+}
+
+.check-box{
+    -fx-padding: 5 5 5 5;
+    -fx-font-size: 9pt;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black;
+    -fx-opacity: 0.6;
+}
+
+.choice-box {
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 1;
+    -fx-background-radius: 0;
+    -fx-background-color: #1d1d1d;
+
+
+    -fx-text-fill: black;
+ /* -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 9pt;
+    -fx-text-fill: #d8d8d8;*/
+
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.combo-box {
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 1;
+    -fx-background-radius: 0;
+    -fx-background-color: #669999;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 9pt;
+    -fx-text-fill: white;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+
+
+/*
+ * Metro style Push Button
+ * Author: Pedro Duque Vieira
+ * http://pixelduke.wordpress.com/2012/10/23/jmetro-windows-8-controls-on-java/
+ */
+.button {
+    -fx-padding: 5 22 5 22;
+    -fx-border-color: #e2e2e2;
+    -fx-border-width: 2;
+    -fx-background-radius: 0;
+    /*-fx-background-color: #1d1d1d;*/
+    /*-fx-background-color: #2F4F4F;*/
+    -fx-background-color: #669999;
+    -fx-font-family: "Segoe UI", Helvetica, Arial, sans-serif;
+    -fx-font-size: 9pt;
+    /*-fx-text-fill: #d8d8d8;*/
+    -fx-text-fill: black;
+    -fx-background-insets: 0 0 0 0, 0, 1, 2;
+}
+
+.button:hover {
+    -fx-background-color: #F8F8FF; /*white */
+ 	-fx-scale-x: 1.1;
+	-fx-scale-y: 1.1;
+}
+
+
+.button:pressed, .button:default:hover:pressed {
+  -fx-background-color: white;
+  -fx-text-fill: #1d1d1d;
+}
+
+.button:focused {
+    -fx-border-color: white, white;
+    -fx-border-width: 1, 1;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-radius: 0, 0;
+    -fx-border-insets: 1 1 1 1, 0;
+}
+
+.button:disabled, .button:default:disabled {
+    -fx-opacity: 0.4;
+    -fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+}
+
+.button:default {
+    -fx-background-color: -fx-focus-color;
+    -fx-text-fill: #ffffff;
+}
+
+.button:default:hover {
+    -fx-background-color: derive(-fx-focus-color,30%);
+}
+
+.date-picker-popup > .month-year-pane {
+  /*  -fx-padding: 0.588883em 0.5em 0.666667em 0.5em; /* 7 6 8 6 */
+    -fx-background-color: derive(-fx-box-border,30%),
+        linear-gradient(to bottom, derive(-fx-base,-3%),
+                                   derive(-fx-base,5%) 50%,
+                                   derive(-fx-base,-3%));
+    -fx-background-insets: 0 0 0 0, 0 0 1 0;
+       -fx-text-fill: blue;
+       -fx-background-color: #ffc0cb
+}
+.date-picker .input-line {
+    -fx-background-color:blue;
+}
+.date-picker .input-focused-line {
+    -fx-background-color: red;
+}
+
+progress-bar > .bar {
+    -fx-background-color: linear-gradient(
+         from 0px .75em to .75em 0px,
+        repeat,          -fx-accent 0%,
+                 -fx-accent 49%,
+         derive(-fx-accent, 30%) 50%,
+         derive(-fx-accent, 30%) 99%
+     );
+ }
+
+/*
+.progress-bar {
+-fx-background-color: yellow;
+-fx-background-radius: 10, 10, 10, 10;
+}
+
+.progress-bar .track{
+-fx-background-color: green;
+-fx-background-insets: 20;
+-fx-background-radius: 6, 6, 6, 6;
+}
+
+.progress-bar .bar {
+-fx-background-color: grey;
+-fx-background-insets: 30, 30, 30, 30;
+-fx-background-radius: 4, 4, 4, 4;
+}*/
