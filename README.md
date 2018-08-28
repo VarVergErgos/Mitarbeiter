@@ -10,6 +10,8 @@ Diese Datenbank nach erstellen eines Verzeichnisses C:/Datenbanken/
 dorthin kopieren. Die Daten dieser Datenbank sind frei erfunden. 
 
 Im package pfad wird die Datenbankverbindung zu diesem Verzeichnis und dieser Datenbank erstellt.
+Im Package icon habe ich einmal den Ausdruck der TableView sowie wie die Datei in Excelexport aussieht eingestellt.
+Name = MitarbeiterView.png sowie ExcelAnsicht.png.
 
 Die in der TableView hochgeladenen Daten können nach Excel xls erstellt werden,
 Weiterhin kann daraus eine xml Datei erzeugt werden.
