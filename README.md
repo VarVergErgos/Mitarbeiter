@@ -1,5 +1,7 @@
 JavaFXML TableView mit Access, Editierbare Spalten, Formatierung von Spalten, Excelexport sowie XML Export möglich
 
+Mit netbeans IDE 8.2 erstellt.
+
 Es wird eine Table-View mit Daten aus einer Accessdatenbank Mitarbeiter.mdb befüllt.
 Im Package jarDateien sind die erforderlichen jar-Dateien für Properties einzustellen.
 
@@ -20,6 +22,9 @@ Das wichtigste habe ich dokumentiert.
 
 Ich bin reiner Anfänger. Aus verschiedenen Tutorials wie Video2Brain, Udemy, Stackoverflow, Github, Luv2Code habe
 ich mir das Wissen angeeignet.
+
+Die packages jarDateien und datenbank sollten Ihr nachher loeschen, wenn Ihr dann Eurer Projekt als eigenständige jar
+datei erstellt loeschen.
 
 
 
